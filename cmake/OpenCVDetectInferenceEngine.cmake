@@ -56,9 +56,9 @@ foreach(lib ${ie_lib_list})
         # For inference_engine
         HINTS ${IE_PLUGINS_PATH}
         HINTS "$ENV{IE_PLUGINS_PATH}"
+        HINTS ${INF_ENGINE_ROOT_DIR}/lib/ubuntu_16.04/intel64
         # For mklml_intel, iomp5
-        HINTS ${INTEL_CVSDK_DIR}/external/mklml_lnx/lib
-        HINTS ${INTEL_CVSDK_DIR}/inference_engine/external/mklml_lnx/lib
+        HINTS ${INF_ENGINE_ROOT_DIR}/external/mklml_lnx/lib
     )
     if(NOT ${lib})
         ie_fail()
